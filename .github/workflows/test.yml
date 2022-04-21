@@ -27,6 +27,6 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: test
       run: |
-        cd testlokal
+        cd /home/runner/work/testlokal/testlokal
         echo hallo
         ls
