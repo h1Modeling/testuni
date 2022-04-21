@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Push to Fernuni Repository
+
+# Controls when the workflow will run
+on:
+  pull_request_target:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        git clone https://user:$GITHUB_TOKEN@github.com/h1Modeling/testlokal
+        cd testlokal
+        git remote remove origin
+        git remote add origin https://github.com/h1Modeling/testuni.git
+        git push -u origin main
