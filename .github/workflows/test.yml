@@ -28,5 +28,4 @@ jobs:
     - name: test
       run: |
         cd ${{ env.REPO_PATH }}
-        git add .
-        git push
+        ls
