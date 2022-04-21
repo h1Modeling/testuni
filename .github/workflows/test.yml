@@ -27,7 +27,6 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: test
       run: |
-        cd ${{ env.REPO_PATH }}
+        cd testlokal
         echo hallo
-        echo ${{ env.REPO_PATH }}
         ls
